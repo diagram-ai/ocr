@@ -42,3 +42,7 @@ At the terminal, go to the folder containing the project and type the following 
 > python manage.py runserver
 
 To tag the few proper nouns that might not be recognised corectly, run the `filtered.py` script.
+
+`filtered.py' depends on nltk tokenizing modules. To install them, run-
+
+> nltk.download('punkt')
