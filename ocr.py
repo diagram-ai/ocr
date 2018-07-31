@@ -20,7 +20,7 @@ def imgOcrEng(file_name):
 	fin.close()
 
 	fhand = open('temp-extracted.txt')
-	fout = open('img-eng-extracted.txt','w')
+	fout = open('extracted.txt','w')
 
 
 	for line in fhand:
@@ -32,12 +32,12 @@ def imgOcrEng(file_name):
 	    fout.write('\n')
 	fout.close()
 
-	f = open("img-eng-extracted.txt", "r")
+	f = open("extracted.txt", "r")
 	text = f.read()
 	f.close()
 
 	os.remove("temp-extracted.txt")
-	os.remove("img-eng-extracted.txt")
+	#os.remove("extracted.txt")
 	return text
 
 
@@ -59,12 +59,12 @@ def pdfOcrEng(file_name):
         text = pytesseract.image_to_string(im, lang = 'eng')
         extracted_text.append(text)
 
-    fin = open('extracted.txt','w')
+    fin = open('temp-extracted.txt','w')
     fin.writelines(["%s\n" % item  for item in extracted_text])
     fin.close()
 
-    fhand = open('extracted.txt')
-    fout = open('pdf-eng-extracted.txt','w')
+    fhand = open('temp-extracted.txt')
+    fout = open('extracted.txt','w')
 
     for line in fhand:
         line.rstrip()
@@ -76,12 +76,12 @@ def pdfOcrEng(file_name):
     fout.close()
 
 
-    f = open("pdf-eng-extracted.txt", "r")
+    f = open("extracted.txt", "r")
     text = f.read()
     f.close()
 
-    os.remove("extracted.txt")
-    os.remove("pdf-eng-extracted.txt")
+    os.remove("temp-extracted.txt")
+    #os.remove("extracted.txt")
     return text
 
 
@@ -110,7 +110,7 @@ def pdfOcrKan(file_name):
 		text = pytesseract.image_to_string(im, lang = 'eng')
 		extracted_text.append(text)
 
-	fin = open('pdf-kan-extracted.txt','w')
+	fin = open('extracted.txt','w')
 	fin.writelines(["%s\n" % item  for item in extracted_text])
 	fin.close()
 
