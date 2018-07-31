@@ -32,9 +32,9 @@ Other dependencies:
 
 > pip install autocorrect
 
-To download the trained data for Kannada, go to 
+To download the trained data for Kannada, go to
 `https://github.com/indic-ocr/tessdata/blob/master/kan/kan.traineddata`
-and paste that file in tessdata in your local folder where tesseract is installed.
+and copy that file into tessdata in your local folder where tesseract is installed.
 
 ## Procedure:
 
