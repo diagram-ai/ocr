@@ -41,7 +41,7 @@ and paste that file in tessdata in your local folder where tesseract is installe
 At the terminal, go to the folder containing the project and type the following command to start the localhost server.
 > python manage.py runserver
 
-To tag the few proper nouns that might not be recognised corectly, run the `filtered.py` script.
+To tag the few proper nouns in english that might not be recognised corectly, run the `filtered.py` script.
 
 `filtered.py` depends on nltk tokenizing modules. To install them, run-
 
