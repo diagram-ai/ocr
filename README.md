@@ -47,7 +47,7 @@ To tag the few proper nouns in english that might not be recognised corectly, ru
 
 > nltk.download('punkt')
 
-#### The extraction is quite resource intensive and takes time(depends on the hardware used), especially if the uploaded file is a large pdf. It is advised to break the pdf into chunks of a couple of pages(5-6) per file and uploading them for quicker results.
+#### The extraction is quite resource intensive and takes time(depends on the hardware used), especially if the uploaded file is a large pdf. It is advised to break the pdf into chunks of a couple of pages(8-10) per file and uploading them for quicker results.
 
 The extracted text can also be found int the project folder in a text file `extracted.txt`.
 
