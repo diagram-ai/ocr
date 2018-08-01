@@ -180,7 +180,7 @@ def imgOcrTel(file_name):
 
 
 
-def pdfOcrTam(file_name):
+def pdfOcrTel(file_name):
 	pdf = wi(filename = file_name, resolution = 300)
 	pdfImage = pdf.convert('jpeg')
 
