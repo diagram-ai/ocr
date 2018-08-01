@@ -18,3 +18,5 @@ for word in words:
          not_words.append(word)
          
 filtered = [w for w in not_words if not w in stopwords.words('english') + list(punctuation)]
+
+print(filtered)
