@@ -89,6 +89,11 @@ def pdfOcrEng(file_name):
 def imgOcrKan(file_name):
  	im = Image.open(file_name)
  	text = pytesseract.image_to_string(im, lang='kan')
+
+ 	fout = open('extracted.txt','w')
+ 	fout.write(text)
+ 	fout.close()
+
  	return text
 
 
@@ -114,4 +119,90 @@ def pdfOcrKan(file_name):
 	fin.writelines(["%s\n" % item  for item in extracted_text])
 	fin.close()
 
-	return extracted_text
+	f = open('extracted.txt','r')
+	text = f.read()
+	f.close()
+
+	return text
+
+
+
+def imgOcrTam(file_name):
+ 	im = Image.open(file_name)
+ 	text = pytesseract.image_to_string(im, lang='tam')
+
+ 	fout = open('extracted.txt','w')
+ 	fout.write(text)
+ 	fout.close()
+
+ 	return text
+
+
+
+def pdfOcrTam(file_name):
+	pdf = wi(filename = file_name, resolution = 300)
+	pdfImage = pdf.convert('jpeg')
+
+	imageBlobs = []
+
+	for img in pdfImage.sequence:
+		imgPage = wi(image = img)
+		imageBlobs.append(imgPage.make_blob('jpeg'))
+
+	extracted_text = []
+
+	for imgBlob in imageBlobs:
+		im = Image.open(io.BytesIO(imgBlob))
+		text = pytesseract.image_to_string(im, lang = 'tam')
+		extracted_text.append(text)
+
+	fin = open('extracted.txt','w')
+	fin.writelines(["%s\n" % item  for item in extracted_text])
+	fin.close()
+
+	f = open('extracted.txt','r')
+	text = f.read()
+	f.close()
+
+	return text
+
+
+
+def imgOcrTel(file_name):
+ 	im = Image.open(file_name)
+ 	text = pytesseract.image_to_string(im, lang='tel')
+
+ 	fout = open('extracted.txt','w')
+ 	fout.write(text)
+ 	fout.close()
+
+ 	return text
+
+
+
+def pdfOcrTam(file_name):
+	pdf = wi(filename = file_name, resolution = 300)
+	pdfImage = pdf.convert('jpeg')
+
+	imageBlobs = []
+
+	for img in pdfImage.sequence:
+		imgPage = wi(image = img)
+		imageBlobs.append(imgPage.make_blob('jpeg'))
+
+	extracted_text = []
+
+	for imgBlob in imageBlobs:
+		im = Image.open(io.BytesIO(imgBlob))
+		text = pytesseract.image_to_string(im, lang = 'tel')
+		extracted_text.append(text)
+
+	fin = open('extracted.txt','w')
+	fin.writelines(["%s\n" % item  for item in extracted_text])
+	fin.close()
+
+	f = open('extracted.txt','r')
+	text = f.read()
+	f.close()
+
+	return text
