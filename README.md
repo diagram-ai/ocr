@@ -67,3 +67,5 @@ Extracted text can also be found in `extracted.txt` inside the same directory.
 
 Replace Eng with Kan,Tam or Tel for Kannada,Tamil or Telegu respectively.
 
+### Note:If you are facing an error saying `normproto file is not in unichar set`, you have to install the support for indian languages' character set.
+
