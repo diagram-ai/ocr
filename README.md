@@ -2,9 +2,9 @@
 
 This project is implemented using Tesseract OCR for character recogniton in images and pdf.
 
-Currently 2 languages are supported, English and Kannada.
+Currently 4 languages are supported, English, Kannada, Tamil and Telegu.
 
-A web interface is developed using Django framework, which allows users to upload an image or a pdf on the webpage that returns the text grabbed from the file uploaded.
+A web interface is developed using Django framework, which allows users to upload an image or a pdf onto the webpage that returns the text grabbed from the file uploaded.
 
 ### Dependencies:
 
@@ -32,9 +32,9 @@ Other dependencies:
 
 > pip install autocorrect
 
-To download the trained data for Kannada, go to
-`https://github.com/indic-ocr/tessdata/tree/master/kan`
-and copy that file into tessdata in your local folder where tesseract is installed.
+To download the trained data for Kannada,Tamil and Telegu, go to
+`https://github.com/indic-ocr/tessdata/`
+The respective trained data will be found in the folders `kan` `tam` and `tel`. Download and copy those file into `tessdata` in your local folder where tesseract is installed.
 
 ## Procedure:
 
