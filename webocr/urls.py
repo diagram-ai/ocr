@@ -23,4 +23,6 @@ urlpatterns = [
     path('kan/', include('kan.urls')),
     path('', include('home.urls')),
     path('home/', include('home.urls')),
+    path('tam/', include('tam.urls')),
+    path('tel/', include('tel.urls')),
 ]
