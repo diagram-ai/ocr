@@ -60,6 +60,10 @@ Run `ocr.py` on the command prompt/terminal.
 
 After execution of the program, pass the file name to the following functions to get the extracted text printed on the terminal.
 Extracted text can also be found in `extracted.txt` inside the same directory. 
+
 `imgOcrEng('file_name')` : for English-Image
+
 `pdfOcrEng('file_name')` : for English-pdf
+
 Replace Eng with Kan,Tam or Tel for Kannada,Tamil or Telegu respectively.
+
