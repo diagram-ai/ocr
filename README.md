@@ -53,19 +53,13 @@ The extracted text can also be found int the project folder in a text file `extr
 
 
 #### To run extract text without web interface:
-Install the dependencies mentioned earlier and just download the `ocr.py` file. Copy the file(from which text is to be extracted) into the folder containing `ocr.py`.
+Install the dependencies mentioned earlier and just download the `ocr_on_terminal.py` file. Copy the file(from which text is to be extracted) into the folder containing `ocr_on_terminal_on_terminal_on_terminal.py`.
 
-Run `ocr.py` on the command prompt/terminal.
-> python ocr.py
+Run `ocr_on_terminal_on_terminal.py` on the command prompt/terminal.
+> python ocr_on_terminal.py
 
-After execution of the program, pass the file name to the following functions to get the extracted text printed on the terminal.
 Extracted text can also be found in `extracted.txt` inside the same directory. 
 
-`imgOcrEng('file_name')` : for English-Image
-
-`pdfOcrEng('file_name')` : for English-pdf
-
-Replace Eng with Kan,Tam or Tel for Kannada,Tamil or Telegu respectively.
 
 ##### Note: If you are facing an error saying `normproto file is not in unichar set`, you have to install the support for indian languages' character set.
 
