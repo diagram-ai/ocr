@@ -1,6 +1,6 @@
 # Optical Character Recogniton
 
-This project is implemented using Tesseract OCR for character recogniton in images and pdf.
+This project is implemented using Tesseract OCR for character recognition in images and pdf.
 
 Currently 4 languages are supported, English, Kannada, Tamil and Telegu.
 
